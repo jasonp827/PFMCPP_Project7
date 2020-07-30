@@ -64,6 +64,7 @@ struct Character
     protected:
         std::vector<std::unique_ptr<Item>> defensiveItems;
         std::vector<std::unique_ptr<Item>> helpfulItems;
+        std::vector<std::unique_ptr<Item>> attackItems;
         int hitPoints, armor;
         int attackDamage;
         bool isDefending = false;
