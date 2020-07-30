@@ -88,8 +88,7 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
-void 
-Character::defeatedOther(int& attribute, int& initialAttribute)
+void Character::defeatedOther(int& attribute, int& initialAttribute)
 {
     if (attribute < initialAttribute)
     {
