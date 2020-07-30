@@ -111,6 +111,9 @@ void Character::attackInternal(Character& other)
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
         //assert(false);
+        defeatedOther(*initialHitPoints, hitPoints);
+        defeatedOther(*initialArmorLevel, armor);
+        defeatedOther(*initialAttackDamage, attackDamage);
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }
 }
