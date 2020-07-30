@@ -2,7 +2,9 @@
 #include "Utility.h"
 #include "DragonSlayer.h"
 
-void AttackItem::use(Character *character)
+AttackItem::AttackItem() : Item("attack item", 10){}
+
+void AttackItem::use(Character* character)
 {
     useAttackItem(character, this);
 }

@@ -63,6 +63,8 @@ void Character::help(Character& other)
     }
 }
 
+
+
 int Character::takeDamage(int damage)
 {
     std::cout << getName() << " is taking " << damage << " damage!" << std::endl;
@@ -86,8 +88,18 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
+void 
+Character::defeatedOther(int& attribute, int& initialAttribute)
+{
+    if (attribute < initialAttribute)
+    {
+        attribute = initialAttribute;
+    }
+    attribute *= 1.1;
+    initialAttribute = attribute;
+}
 
-#include <assert>
+//#include <assert>
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )

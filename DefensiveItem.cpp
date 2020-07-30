@@ -1,9 +1,7 @@
 #include "DefensiveItem.h"
-#include "Dwarf.h"
-#include "Paladin.h"
-#include "DragonSlayer.h"
-#include "Dragon.h"
 #include "Utility.h"
+
+DefensiveItem::DefensiveItem() : Item("defensive item", 3) { }
 
 void DefensiveItem::use(Character* character)
 {
