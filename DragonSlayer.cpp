@@ -4,7 +4,7 @@
 
 DragonSlayer::DragonSlayer(std::string name_, int hitPoints_, int armor_) : Character(hitPoints_, armor_, 4), name(name_)
 {
-    attackItem = std::unique_ptr<AttackItem> (new AttackItem());
+    std::unique_ptr<AttackItem> attackItem = std::make_unique<AttackItem>();
     helpfulItems = makeHelpfulItems(3);
     defensiveItems = makeDefensiveItems(1);
 }
